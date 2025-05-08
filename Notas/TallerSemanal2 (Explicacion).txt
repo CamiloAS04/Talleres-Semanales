@@ -1,0 +1,63 @@
+# Crear un archivo de texto con la explicación del código de calificaciones
+
+explicacion = """
+Este código es un programa interactivo que permite al usuario ingresar calificaciones escolares, calcular su promedio,
+comparar valores, y buscar calificaciones específicas. A continuación, se explica paso a paso:
+
+---
+
+OBJETIVO GENERAL:
+1. Ingresar una calificación individual y verificar si está aprobada.
+2. Ingresar una lista de calificaciones y validarlas.
+3. Calcular el promedio de esas calificaciones.
+4. Contar cuántas son mayores que un valor dado.
+5. Verificar cuántas veces aparece una calificación específica.
+
+---
+
+PASO 1: Ingreso de una calificación individual
+- Se solicita una calificación (nota) entre 0 y 100.
+- Se usa un bucle para insistir hasta obtener un valor correcto.
+- Se verifica que el número esté dentro del rango permitido.
+
+Evaluación:
+- Si la nota es mayor o igual a 60: 'Aprobado'.
+- Si es menor: 'Reprobado'.
+
+---
+
+PASO 2: Ingreso de varias calificaciones
+- Se pide al usuario que ingrese varias calificaciones separadas por comas.
+- Se procesan y validan una por una.
+- Se almacenan solo aquellas que están entre 0 y 100.
+
+Cálculo del promedio:
+- Si hay calificaciones válidas, se calcula el promedio.
+- Si no, se indica que no hay datos válidos.
+
+---
+PASO 3: Comparación con un valor
+- El usuario ingresa un valor entre 0 y 100.
+- Se cuenta cuántas calificaciones en la lista son mayores a ese valor.
+
+---
+
+PASO 4: Búsqueda de calificación específica
+- Se pide una calificación específica a buscar.
+- Se recorre la lista para contar cuántas veces aparece.
+- Se muestra el resultado de la búsqueda.
+
+---
+
+EN RESUMEN:
+Este código guía al usuario paso a paso para trabajar con calificaciones:
+- Entrada validada
+- Procesamiento seguro
+- Estadísticas claras y útiles
+"""
+
+# Guardar en un archivo
+with open("explicacion_calificaciones.txt", "w", encoding="utf-8") as f:
+    f.write(explicacion)
+
+print("Archivo 'explicacion_calificaciones.txt' creado con éxito.")

@@ -1,0 +1,72 @@
+# Crear un archivo de texto con la explicación del sistema de inventario
+
+explicacion_inventario = """
+Este programa implementa un sistema interactivo para gestionar un inventario de productos. El usuario puede añadir, buscar,
+actualizar, eliminar productos, así como consultar el valor total del inventario y ver todos los productos registrados.
+
+---
+
+ESTRUCTURA PRINCIPAL:
+El inventario se guarda como un diccionario en Python, donde:
+- La clave es el nombre del producto (tipo str)
+- El valor es una tupla con (precio: float, cantidad: int)
+
+---
+
+FUNCIONES PRINCIPALES:
+
+1. agregar_producto(inventario, nombre, precio, cantidad)
+   - Añade un producto nuevo al inventario.
+   - Si el producto ya existe, pregunta si se desea actualizar la cantidad.
+   - Usa `lower()` para evitar duplicados por mayúsculas/minúsculas.
+
+2. buscar_producto(inventario, nombre)
+   - Busca un producto por su nombre (ignorando mayúsculas).
+   - Muestra su precio y cantidad si existe.
+
+3. actualizar_precio(inventario, nombre, nuevo_precio)
+   - Cambia el precio de un producto sin afectar su cantidad.
+
+4. eliminar_producto(inventario, nombre)
+   - Elimina un producto del inventario si existe.
+
+5. calcular_valor_total(inventario)
+   - Suma el valor total de todos los productos (precio * cantidad).
+
+6. mostrar_todos(inventario)
+   - Muestra todos los productos del inventario con sus detalles.
+
+7. solicitar_numero(mensaje, es_entero=False)
+   - Valida que el usuario ingrese un número positivo.
+   - Si `es_entero=True`, convierte a int.
+
+---
+
+ MENÚ INTERACTIVO:
+
+- Permite al usuario interactuar con el sistema mediante opciones numéricas:
+  1. Añadir producto
+  2. Consultar producto
+  3. Actualizar precio
+  4. Eliminar producto
+  5. Calcular valor total
+  6. Ver todos los productos
+  7. Salir del programa
+
+- El menú se repite hasta que el usuario selecciona "Salir".
+- Las entradas se validan para evitar errores comunes.
+
+---
+VENTAJAS:
+- Código modular y reutilizable.
+- Validación robusta de entradas.
+- Evita errores por mayúsculas/minúsculas al tratar nombres.
+- Útil como base para un sistema de punto de venta o control de stock.
+
+"""
+
+# Guardar en un archivo
+with open("explicacion_inventario.txt", "w", encoding="utf-8") as f:
+    f.write(explicacion_inventario)
+
+print("Archivo 'explicacion_inventario.txt' creado con éxito.")

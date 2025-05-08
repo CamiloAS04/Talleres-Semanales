@@ -1,0 +1,58 @@
+explicacion = """
+# Explicación detallada del código de gestión de estudiantes
+
+## Objetivo
+Este programa permite gestionar un registro de estudiantes mediante un menú interactivo. 
+Se puede agregar, buscar, actualizar y eliminar estudiantes, además de calcular el promedio de notas y listar estudiantes con nota baja.
+
+## Secciones del código
+
+### 1. Colores para mensajes
+Se definen constantes para mostrar mensajes en colores:
+- `DANGER` (rojo): Errores
+- `WARNING` (amarillo): Advertencias
+- `SUCCESS` (verde): Éxito
+- `RESET`: Restablecer el color
+
+### 2. Diccionario de estudiantes
+`students`: Almacena los datos de cada estudiante. Cada entrada tiene como clave su ID y como valor otro diccionario con:
+- `Nombre`: Nombre completo
+- `Edad`: Edad del estudiante
+- `Nota`: Nota entre 0.0 y 5.0
+
+### 3. Funciones principales
+
+#### `add_student(...)`
+Agrega un estudiante nuevo si el ID no existe y valida que la edad y nota sean válidas.
+
+#### `search_by_id(student_id)`
+Busca un estudiante por su ID y muestra su información si existe.
+
+#### `search_by_name(name)`
+Busca estudiantes cuyo nombre contenga el texto ingresado.
+
+#### `update_student(student_id, new_age, new_grade)`
+Actualiza la edad y/o nota de un estudiante si su ID existe y las entradas son válidas.
+
+#### `delete_student(student_id)`
+Elimina a un estudiante del registro por su ID.
+
+#### `calculate_average_grade()`
+Calcula el promedio de las notas de todos los estudiantes registrados.
+
+#### `list_students_below(threshold)`
+Lista estudiantes cuya nota sea inferior al umbral dado (por defecto 3.0).
+
+### 4. Menú interactivo
+Un bucle `while` presenta un menú al usuario para seleccionar una opción (1 a 8). Cada opción ejecuta una de las funciones definidas anteriormente.
+- Si el usuario elige "Salir", el bucle se rompe.
+- Si se introduce una opción inválida, se muestra una advertencia.
+
+## Uso del programa
+El usuario interactúa con el menú para administrar el registro de estudiantes de manera simple y visual.
+"""
+
+with open("explicacion_codigo_gestion_estudiantes.txt", "w", encoding="utf-8") as file:
+    file.write(explicacion)
+
+print("Archivo 'explicacion_codigo_gestion_estudiantes.txt' generado correctamente.")
